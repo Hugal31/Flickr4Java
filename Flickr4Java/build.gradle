@@ -2,7 +2,6 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'maven'
-//apply plugin: 'library'
 
 version = '2.16'
 group = 'com.flickr4java.flickr'
@@ -38,6 +37,8 @@ task setupTests(type:JavaExec, dependsOn:classes) {
     main = 'com.flickr4java.flickr.test.Setup'
     classpath = sourceSets.test.runtimeClasspath
 }
+
+tasks.withType(Javadoc).all { enabled = false }
 
 //create a javadoc jar for maven repo
 task javadocJar(type: Jar, dependsOn: javadoc) {
