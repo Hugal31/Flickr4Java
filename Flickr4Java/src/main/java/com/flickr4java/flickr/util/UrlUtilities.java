@@ -146,7 +146,7 @@ public class UrlUtilities {
      * @param host the host
      * @param port the port
      * @param path the path
-     * @return
+     * @return Url
      * @throws MalformedURLException 
      */
     public static URL buildPostUrl(String host, int port, String path) throws MalformedURLException {
